@@ -18,3 +18,62 @@ input {
   padding: 4px;
   font-family: inherit;
 }
+
+.btn {
+  display: inline;
+  padding: 12px 24px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: cadetblue;
+}
+
+.btn:disabled {
+  background-color: whitesmoke;
+  border-color: crimson;
+  color: crimson;
+  cursor: not-allowed;
+}
+
+.form-input:checked {
+  outline: 2px solid teal;
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+.form-input:checked + .form-label {
+  color: teal;
+}
+
+.form-input:in-range {
+  border-color: greenyellow;
+}
+.form-input:out-of-range {
+  border-color: crimson;
+}
+
+.form_example {
+  position: relative;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  /* outline: 1px solid crimson; */
+  color: crimson;
+}
+
+.form-input:out-of-range + .modal {
+  display: block;
+}
+
+.form-input:in-range + .modal {
+  display: none;
+}

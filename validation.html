@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Validation</title>
+  </head>
+  <body>
+    <a href="./index.html">MAIN</a>
+    <form action="">
+      <label for=""
+        >USERNAME<input
+          type="text"
+          name="username"
+          autofocus
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space"
+      /></label>
+      <label for=""
+        >E-MAIL<input
+          type="email"
+          name="email"
+          autocomplete="off"
+          required
+          pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9.]{2,}[.][a-zA-Z0-9]{2,}$"
+          title="Enter correct email"
+      /></label>
+      <label for=""
+        >PASSWORD<input
+          type="password"
+          name="password"
+          required
+          minlength="8"
+          maxlength="16"
+          required="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,}$"
+      /></label>
+      <button type="submit" class="btn">ACTIVE</button>
+      <button type="submit" class="btn" disabled>DISABLED</button>
+    </form>
+    
+    <form action="">
+      <p>Яке твоє хобі?</p>
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="Manga"
+          id="manga"
+        />
+        <label for="manga" class="form-label">Manga</label>
+      <div/>
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="Games"
+          id="games"
+        />
+        <label for="games" class="form-label">Games</label>
+      </div>
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="Salso"
+          id="salso"
+        />
+        <label for="salso" class="form-label">Salso</label>
+      </div>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <form action="" class="form_example">
+        <!-- in-range out-of-range -->
+        <p>PIZZAS</p>
+      <div class="form-field">
+        <input
+          type="number"
+          class="form-input"
+          name="amount-1"
+          value="0"
+          id="amount-1"
+          required
+          min="1"
+          max="10"
+          step="1"
+        />
+        <label for="amount-1" class="form-label">HOW MANY PIZZA'S YOU WANT BUY?</label>
+      <div/>
+
+      <div class="modal">
+        <p>Value is wrong</p>
+      </div>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
